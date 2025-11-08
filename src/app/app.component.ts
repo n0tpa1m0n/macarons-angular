@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { ProductService } from '../services/product.service';
+import { CartService } from '../services/cart.service';
+import { Product } from '../interfaces/product.interface';
+import { Advantage } from './components/advantage/advantage.component';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +10,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  public showPresent: boolean = true;
-  public phoneNumber: string = '+375 (29) 368-98-68';
+  public showCart: boolean = true;
+  public phoneNumber: string = '375293689868';
   public instagramLink: string = 'https://instagram.com/your_profile';
 
-  public cards = [
+  public cards: Advantage[] = [
     {
       text: "1",
       title: 'Лучшие продукты',
@@ -33,28 +37,18 @@ export class AppComponent {
     },
   ];
 
-  public items = [
-    {
-      image: '1.png',
-      title: 'Макарун с малиной',
-      description: '1 шт. 1,70 руб.',
-    },
-    {
-      image: '2.png',
-      title: 'Макарун с манго',
-      description: '1 шт. 1,70 руб.',
-    },
-    {
-      image: '3.png',
-      title: 'Пирог с ванилью',
-      description: '1 шт. 1,70 руб.',
-    },
-    {
-      image: '4.png',
-      title: 'Пирог с фисташками',
-      description: '1 шт. 1,70 руб.',
-    },
-  ];
+  public items: Product[] = [];
+
+  constructor(
+    private productService: ProductService,
+    public cartService: CartService
+  ) {
+    this.items = this.productService.getProducts();
+  }
+
+  public onProductAdded(productName: string): void {
+    alert(`${productName} добавлен в корзину!`);
+  }
 
   public scrollTo(target: HTMLElement): void {
     target.scrollIntoView({behavior: "smooth"});
