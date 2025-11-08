@@ -29,10 +29,7 @@
 @white: rgb(255, 255, 255);
 @brown: rgb(51, 25, 7);
 @red:rgb(155, 37, 62);
-* {
-  margin: 0;
-  padding: 0;
-}
+
 body {
   font-family: Tavolga, sans-serif;
 }
@@ -125,7 +122,7 @@ header {
         font-size: 55px;
         color: @white;
         z-index: 3;
-
+        font-family: Tavolga, sans-serif;
       }
 
       .main__description {
@@ -133,7 +130,7 @@ header {
         margin-top: 60px;
         color: @white;
         line-height: 1.389;
-
+        font-family: Tavolga, sans-serif;
         text-align: left;
         width: 345px;
         margin-bottom: 80px;
@@ -248,6 +245,8 @@ header {
       font-size: 45px;
       color: @brown;
       margin-bottom: 60px;
+      font-family: Tavolga, sans-serif;
+
     }
 
     .information__image img {
@@ -390,12 +389,12 @@ header {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 26px 21px;
-      }
+        color: white;
+        width: 196px;
+        }
 
       .item__btn {
-        background-image: -moz-linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
         background-image: -webkit-linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
-        background-image: -ms-linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
         width: 130px;
         padding: 19px 29px;
         border-radius: 40px;
@@ -476,9 +475,9 @@ header {
     .order__title {
       font-size: 45px;
       color: @brown;
-      -moz-transform: matrix(1.00011967125209, 0, 0, 1.00072983989549, 0, 0);
+      //-moz-transform: matrix(1.00011967125209, 0, 0, 1.00072983989549, 0, 0);
       -webkit-transform: matrix(1.00011967125209, 0, 0, 1.00072983989549, 0, 0);
-      -ms-transform: matrix(1.00011967125209, 0, 0, 1.00072983989549, 0, 0);
+      //-ms-transform: matrix(1.00011967125209, 0, 0, 1.00072983989549, 0, 0);
       margin-bottom: 41px;
     }
 
@@ -803,9 +802,9 @@ input::placeholder {
 
 .main__btn() {
 
-  background-image: -moz-linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
+  //background-image: -moz-linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
   background-image: -webkit-linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
-  background-image: -ms-linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
+  //background-image: -ms-linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
   //width: 240px;
   //width: 295px;
   padding: 22px 0;
