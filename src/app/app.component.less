@@ -81,7 +81,7 @@ header {
 
     }
 
-    .navigation__link:hover {
+      .navigation__link:hover {
       border-bottom: 2px solid #821328;
 
 
@@ -265,9 +265,6 @@ header {
 
 
   .information__box2 {
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: space-between;*/
     display: grid;
     grid-template-columns:repeat(auto-fill, minmax(220px, 220px));
     grid-column-gap: 87px;
@@ -289,6 +286,8 @@ header {
     line-height: 1.222;
     text-align: center;
     margin-bottom: 143px;
+    font-family: Tavolga, sans-serif;
+
   }
 
   .products__items {
@@ -296,7 +295,7 @@ header {
     row-gap: 80px;
     grid-template-columns: repeat(auto-fill, minmax(259px, 1fr));
     display: grid;
-    /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+    font-family: Tavolga, sans-serif;
 
 
 
@@ -461,7 +460,7 @@ header {
     .order__title {
       font-size: 45px;
       color: @brown;
-      //-moz-transform: matrix(1.00011967125209, 0, 0, 1.00072983989549, 0, 0);
+      font-family: Tavolga, sans-serif;
       -webkit-transform: matrix(1.00011967125209, 0, 0, 1.00072983989549, 0, 0);
       //-ms-transform: matrix(1.00011967125209, 0, 0, 1.00072983989549, 0, 0);
       margin-bottom: 41px;
@@ -996,6 +995,20 @@ input::placeholder {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+
+        &:hover .card__circle_red {
+          background-color: #EBA8B1FF;
+        }
+
+        &:hover .circle__text2 {
+          color: rgb(130, 19, 40);
+        }
+
+        &:hover .circle__text_first {
+          color: rgb(130, 19, 40);
+        }
+
       }
     }
   }
