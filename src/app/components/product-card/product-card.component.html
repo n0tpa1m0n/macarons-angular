@@ -2,7 +2,7 @@
   <img class="item__img" [src]="'assets/images/' + product.image" [alt]="product.title">
   <h2 class="item__title">{{ product.title }}</h2>
   <div class="item__block">
-    {{ product.description }} {{ product.price | number:'1.2-2' }} руб.
+    {{ product.description }} {{ product.price | currency:'руб.':'symbol':'1.2-2' }}
     <div>
       <button class="item__btn" appButtonHover (click)="onAddToCart()">Заказать</button>
     </div>

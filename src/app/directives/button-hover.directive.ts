@@ -20,6 +20,6 @@ export class ButtonHoverDirective {
   }
 
   private setBackground(color: string): void {
-    this.renderer.setStyle(this.el.nativeElement, 'background-color', color);
+    this.renderer.setStyle(this.el.nativeElement, 'background', color);
   }
 }

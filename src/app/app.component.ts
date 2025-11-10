@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ProductService } from '../services/product.service';
-import { CartService } from '../services/cart.service';
-import { Product } from '../interfaces/product.interface';
+import { ProductService } from './../services/product.service';
+import { CartService } from './../services/cart.service';
+import { Product } from './../interfaces/product.interface';
 import { Advantage } from './components/advantage/advantage.component';
 
 @Component({
@@ -48,6 +48,8 @@ export class AppComponent {
 
   public onProductAdded(productName: string): void {
     alert(`${productName} добавлен в корзину!`);
+
+    this.selectProduct(productName);
   }
 
   public scrollTo(target: HTMLElement): void {
